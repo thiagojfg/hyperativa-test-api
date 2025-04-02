@@ -42,6 +42,9 @@ To run the application along with its MySQL database configured in `docker-compo
 1. Confirm the services:
     - MySQL will be available at `localhost:3306`.
     - The Spring Boot app will be available at `http://localhost:8080`.
+When the application runs at the first time, it will create the database schema and insert a test user:
+    - username: admin
+    - password: admin123
 
 ## How to Test the Application
 ### 1. Using Unit and Integration Tests
@@ -51,6 +54,7 @@ Pre-configured tests are available in the project using JUnit and Testcontainers
   ./gradlew test
 ```
 _This command will test the application using the pre-defined test configuration._
+PS.: For integration test the spring boot will run using a h2 in memory database
 ### 2. API Testing with Swagger UI
 The Swagger UI is enabled and can be accessed after running the application:
 1. Access the Swagger UI at: `http://localhost:8080/swagger-ui`.
