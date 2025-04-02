@@ -12,12 +12,12 @@ To run the application locally using Gradle:
 1. Open a terminal and navigate to the project's root directory.
 2. Build the application:
 ``` bash
-   ./gradlew build
+   gradle build
 ```
 _This command compiles the code, runs tests, and packages the application into a JAR file._
 1. Run the packaged application:
 ``` bash
-   ./gradlew bootRun
+   gradle bootRun
 ```
 The application will start on port `8080` by default, and you'll be able to access the API at `http://localhost:8080`. 
 For this step a MySQL server must be running according to the properties defined at src/main/resources/application.properties.
@@ -51,7 +51,7 @@ When the application runs at the first time, it will create the database schema 
 Pre-configured tests are available in the project using JUnit and Testcontainers:
 - Run all tests using Gradle:
 ``` bash
-  ./gradlew test
+  gradle test
 ```
 _This command will test the application using the pre-defined test configuration._
 PS.: For integration test the spring boot will run using a h2 in memory database
